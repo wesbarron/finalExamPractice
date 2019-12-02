@@ -1,0 +1,20 @@
+{
+  "name": "finalpractice",
+  "version": "1.0.0",
+  "description": "Final Exam Practice",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wesbarron/finalExamPractice.git"
+  },
+  "author": "Wes Barron",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wesbarron/finalExamPractice/issues"
+  },
+  "homepage": "https://github.com/wesbarron/finalExamPractice#readme"
+}
