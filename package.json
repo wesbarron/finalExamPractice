@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/wesbarron/finalExamPractice/issues"
   },
-  "homepage": "https://github.com/wesbarron/finalExamPractice#readme"
+  "homepage": "https://github.com/wesbarron/finalExamPractice#readme",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1"
+  }
 }
