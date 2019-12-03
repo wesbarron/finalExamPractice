@@ -29,15 +29,21 @@ app.get('/', async function(req, res){
         var title = json['Search'][i].Title;
         var poster = json['Search'][0].Poster;
         var year = json['Search'][0].Year; 
-
-        res.render("index",{
-         
-        title: title,
-        poster: poster,
-        year: year
-        
-    });
     }
+        res.send(
+         
+        `<div class="container">
+            <div class="row">
+                <div class="col-sm">
+                <h1>${title}</h1>
+                <img src="${poster}">
+                <p>${year}</p>
+                </div>
+            </div>
+        </div>`
+        
+    );
+    
     /*   
     res.render("index",{
          
