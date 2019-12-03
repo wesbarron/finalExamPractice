@@ -25,10 +25,10 @@ app.get('/', async function(req, res){
     var json = await output.json();
     var i;
 
-    for(i = 0; i < json.length; i++){
-        var title = json['Search'][i].Title;
-        var poster = json['Search'][i].Poster;
-        var year = json['Search'][i].Year; 
+    
+        var title = json['Search'][0].Title;
+        var poster = json['Search'][0].Poster;
+        var year = json['Search'][0].Year; 
     
        
     res.render("index",{
@@ -38,7 +38,7 @@ app.get('/', async function(req, res){
         year: year
         
     });
-}
+
 });
 
 http.createServer(app).listen(port, function(){
