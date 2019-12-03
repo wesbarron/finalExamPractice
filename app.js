@@ -33,7 +33,7 @@ app.get('/', async function(req, res){
 var weatherURL = "https://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=b6907d289e10d714a6e88b30761fae22";
 
 app.get('/', async function(req, res){
-    var weatherOutput = await fetch(url);
+    var weatherOutput = await fetch(weatherURL);
     var weatherJson = await weatherOutput.json();
 
     res.send(weatherJson);
