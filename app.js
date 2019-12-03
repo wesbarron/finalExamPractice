@@ -30,6 +30,17 @@ app.get('/', async function(req, res){
 
 });
 
+var weatherURL = "https://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=b6907d289e10d714a6e88b30761fae22";
+
+app.get('/about', async function(req, res){
+    var weatherOutput = await fetch(url);
+    var weatherJson = await weatherOutput.json();
+
+    res.render("about", {
+        weatherJson: weatherJson
+    });
+});
+
 http.createServer(app).listen(port, function(){
     console.log('listening on server port ' + port);
 });
