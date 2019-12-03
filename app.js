@@ -3,6 +3,7 @@ var bodyParser = require('body-parser');
 var path = require('path');
 var http = require('http');
 var https = require('https');
+var nodeFetch = require('node-fetch');
 
 var app = express();
 var port = process.env.PORT || 3000;
