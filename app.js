@@ -16,12 +16,15 @@ app.use(express.static("public"));
 app.use(express.json());
 
 //get movie
-
-app.get('/', function(req, res){
-    var url = "https://www.omdbapi.com/?s=rambo&apikey=d42aca4a";
+var url = "https://www.omdbapi.com/?s=rambo&apikey=d42aca4a";
     fetch(url)
     .then(response => response.json())
     .then(data => {
+        console.log(data)
+    });
+
+app.get('/', function(req, res){
+    
         res.render("index", {
             title: data['Search'][0].Title
         });
