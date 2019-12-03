@@ -27,8 +27,8 @@ app.get('/', async function(req, res){
 
     for(var i = 0; i < json.length; i++){
         var title = json['Search'][i].Title;
-        var poster = json['Search'][0].Poster;
-        var year = json['Search'][0].Year; 
+        var poster = json['Search'][i].Poster;
+        var year = json['Search'][i].Year; 
     }
         res.send(
          
