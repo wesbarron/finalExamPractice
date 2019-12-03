@@ -26,12 +26,19 @@ app.get('/', async function(req, res){
     var output = await fetch(url);
     var json = await output.json();
     var i;
-        for(i = 0; i < json.length; i++){
+
+    for(i = 0; i < json.length; i++){
+        title = json['Search'][i].Title;
+        poster = json['Search'][i].Poster;
+        year = json['Search'][i].Year; 
+    }
+       
     res.render("index",{
-        title: json['Search'][i].Title,
-        poster: json['Search'][i].Poster,
-        year: json['Search'][i].Year
-        }
+         
+        title: title,
+        poster: poster,
+        year: year
+        
     });
 });
 
