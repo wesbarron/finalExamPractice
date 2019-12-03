@@ -16,7 +16,12 @@ app.use(express.json());
 //get movie
 
 app.get('/', function(req, res){
-    res.send('<h1>Hello</h1>');
+    var url = "http://www.omdbapi.com/?s=rambo&apikey=d42aca4a";
+    fetch(url)
+    .then(response => response.json())
+    .then(data => {
+        res.send(data);
+    });
 });
 
 http.createServer(app).listen(port, function(){
