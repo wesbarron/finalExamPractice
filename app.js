@@ -18,9 +18,7 @@ app.use(express.json());
 
 //get movie
 var url = "https://www.omdbapi.com/?s=rambo&apikey=d42aca4a";
-var title;
-var poster;
-var year;
+
   
 app.get('/', async function(req, res){
     var output = await fetch(url);
@@ -35,9 +33,9 @@ app.get('/', async function(req, res){
        
     res.render("index",{
          
-        title: Title,
-        poster: Poster,
-        year: Year
+        Title: Title,
+        Poster: Poster,
+        Year: Year
         
     });
 }
