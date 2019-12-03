@@ -29,15 +29,23 @@ app.get('/', async function(req, res){
         var title = json['Search'][i].Title;
         var poster = json['Search'][0].Poster;
         var year = json['Search'][0].Year; 
-    }
-       
-    res.render("index",{
+
+        res.render("index",{
          
         title: title,
         poster: poster,
         year: year
         
     });
+    }
+    /*   
+    res.render("index",{
+         
+        title: title,
+        poster: poster,
+        year: year
+        
+    }); */
 
 });
 
