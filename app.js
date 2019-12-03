@@ -26,16 +26,16 @@ app.get('/', async function(req, res){
     var i;
 
     for(i = 0; i < json.length; i++){
-        var Title = json['Search'][i].Title;
-        var Poster = json['Search'][i].Poster;
-        var Year = json['Search'][i].Year; 
+        var title = json['Search'][i].Title;
+        var poster = json['Search'][i].Poster;
+        var year = json['Search'][i].Year; 
     
        
     res.render("index",{
          
-        Title: Title,
-        Poster: Poster,
-        Year: Year
+        title: title,
+        poster: poster,
+        year: year
         
     });
 }
