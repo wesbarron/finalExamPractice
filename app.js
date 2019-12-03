@@ -20,13 +20,18 @@ app.use(express.json());
 var url = "https://www.omdbapi.com/?s=rambo&apikey=d42aca4a";
 var title;
 var poster;
+var year;
   
 app.get('/', async function(req, res){
     var output = await fetch(url);
     var json = await output.json();
+    var i;
+        for(i = 0; i < json.length; i++){
     res.render("index",{
-        title: json['Search'][0].Title,
-        poster: json['Search'][0].Poster
+        title: json['Search'][i].Title,
+        poster: json['Search'][i].Poster,
+        year: json['Search'][i].Year
+        }
     });
 });
 
