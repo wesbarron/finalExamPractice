@@ -20,7 +20,7 @@ app.get('/', function(req, res){
     fetch(url)
     .then(response => response.json())
     .then(data => {
-        res.send(data['Search'][1].Year);
+        res.json(data['Search'][1].Year);
     });
 });
 
