@@ -31,7 +31,7 @@ app.get('/', async function(req, res){
         var Title = json['Search'][i].Title;
         var Poster = json['Search'][i].Poster;
         var Year = json['Search'][i].Year; 
-    }
+    
        
     res.render("index",{
          
@@ -40,6 +40,7 @@ app.get('/', async function(req, res){
         year: Year
         
     });
+}
 });
 
 http.createServer(app).listen(port, function(){
