@@ -23,13 +23,13 @@ var url = "https://www.omdbapi.com/?s=rambo&apikey=d42aca4a";
 app.get('/', async function(req, res){
     var output = await fetch(url);
     var json = await output.json();
-    var i;
-
     
-        var title = json['Search'][0].Title;
+
+    for(var i = 0; i < json.length; i++){
+        var title = json['Search'][i].Title;
         var poster = json['Search'][0].Poster;
         var year = json['Search'][0].Year; 
-    
+    }
        
     res.render("index",{
          
