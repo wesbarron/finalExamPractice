@@ -29,7 +29,7 @@ app.get('/', async function(req, res){
         var title = json['Search'][i].Title;
         var poster = json['Search'][i].Poster;
         var year = json['Search'][i].Year; 
-    }
+    
         res.send(
          
         `<div class="container">
@@ -43,7 +43,7 @@ app.get('/', async function(req, res){
         </div>`
         
     );
-    
+        }
     /*   
     res.render("index",{
          
