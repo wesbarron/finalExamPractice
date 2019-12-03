@@ -22,7 +22,9 @@ var url = "https://www.omdbapi.com/?s=rambo&apikey=d42aca4a";
 app.get('/', async function(req, res){
     var output = await fetch(url);
     var json = await output.json();
-    res.send(json);
+    res.render("/pages/index",{
+        title: json['Search'][0].Title
+    });
 });
 
 http.createServer(app).listen(port, function(){
