@@ -16,7 +16,7 @@ app.use(express.json());
 //get movie
 
 app.get('/', function(req, res){
-    var url = "http://www.omdbapi.com/?s=rambo&apikey=d42aca4a";
+    var url = "https://www.omdbapi.com/?s=rambo&apikey=d42aca4a";
     fetch(url)
     .then(response => response.json())
     .then(data => {
