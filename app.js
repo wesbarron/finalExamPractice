@@ -1,10 +1,10 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const path = require('path');
-const http = require('http');
-const https = require('https');
+var express = require('express');
+var bodyParser = require('body-parser');
+var path = require('path');
+var http = require('http');
+var https = require('https');
 
-const app = express();
+var app = express();
 var port = process.env.PORT || 3000;
 
 app.set('views', path.join(__dirname, 'views'));
