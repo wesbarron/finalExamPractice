@@ -36,7 +36,7 @@ app.get('/', async function(req, res){
     var weatherOutput = await fetch(url);
     var weatherJson = await weatherOutput.json();
 
-    res.send('<h1>' + weatherJson.weather[0].id + '</h1>');
+    res.send(weatherJson);
 
    /* res.render("about", {
         weatherJson: weatherJson
