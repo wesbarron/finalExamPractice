@@ -35,9 +35,9 @@ app.get('/', async function(req, res){
         `<div class="container">
             <div class="row">
                 <div class="col-sm">
-                <h1>` + title[i] + `</h1>
-                <img src="` + poster + `">
-                <p>` + year + `</p>
+                <h1>${title[i]}</h1>
+                <img src="${poster[i]}">
+                <p>${year[i]}</p>
                 </div>
             </div>
         </div>`
