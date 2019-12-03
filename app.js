@@ -18,11 +18,12 @@ app.use(express.json());
 
 //get movie
 var url = "https://www.omdbapi.com/?s=rambo&apikey=d42aca4a";
+var title;
   
 app.get('/', async function(req, res){
     var output = await fetch(url);
     var json = await output.json();
-    res.render("views/pages/index.ejs",{
+    res.render("index",{
         title: json['Search'][0].Title
     });
 });
