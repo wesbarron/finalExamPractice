@@ -19,7 +19,7 @@ app.use(express.json());
 //get movie
 var url = "https://www.omdbapi.com/?s=rambo&apikey=d42aca4a";
 
-  
+/*
 app.get('/', async function(req, res){
     var output = await fetch(url);
     var json = await output.json();
@@ -28,19 +28,19 @@ app.get('/', async function(req, res){
          json: json
     }); 
 
-});
+}); */
 
 var weatherURL = "https://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=b6907d289e10d714a6e88b30761fae22";
 
-app.get('/about', async function(req, res){
+app.get('/', async function(req, res){
     var weatherOutput = await fetch(url);
     var weatherJson = await weatherOutput.json();
 
-    res.send
+    res.send('<h1>' + weatherJson.weather[0].id + '</h1>');
 
-    res.render("about", {
+   /* res.render("about", {
         weatherJson: weatherJson
-    });
+    }); */
 });
 
 http.createServer(app).listen(port, function(){
